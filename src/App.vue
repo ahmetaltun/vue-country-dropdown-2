@@ -1,49 +1,65 @@
 <template>
   <div id="app">
     <h2 class="title">Vue Country Dropdown 2</h2>
-    <vue-country-dropdown-2 
-      :showNotSelectedOption="true"
+    <vue-country-dropdown
+      @onSelect="countrySelected"
+      :preferredCountries="['TR', 'US', 'GB']"
       :defaultCountry="defaultCountry"
       :immediateCallSelectEvent="true"
-      @onSelect="countrySelected"
+      :enabledFlags="true"
+      :enabledName="true"
+      :enabledPhonecode="true"
+      :showNotSelectedOption="true"
+      :notSelectedOptionText="'Not Selected'"
+      :disabled="false"
+      :clearable="false"
+      :multiple="false"
+      :searchable="true"
+      :closeOnSelect="true"
+      :placeholder="'Select a country'"
     />
-    <div class="description" v-if="country">
+    <div class="description">
       {{ 
         `{ 
-          flag: "${country.flag}", 
-          name: "${country.name}", 
-          isoCode: "${country.isoCode}", 
-          phoneCode: "${country.phonecode}" 
+          flag: "${flag}", 
+          name: "${name}", 
+          isoCode: "${isoCode}", 
+          phoneCode: "${phonecode}" 
         }` 
       }}
     </div>
-    <button @click="test">
-      Test
-    </button>
   </div>
 </template>
 
 <script>
-import VueCountryDropdown2 from './components/vue-country-dropdown.vue';
+import VueCountryDropdown from './components/vue-country-dropdown.vue';
 
 export default {
   name: 'App',
   components: {
-    VueCountryDropdown2,
+    VueCountryDropdown,
   },
   data() {
     return {
-      country: null,
+      name: "",
+      isoCode: "",
+      phonecode: "",
+      flag: "",
+      currency: "",
+      timezones: [],
       defaultCountry: "TR",
     }
   },
   methods: {
-    countrySelected(country) {
-      this.country = country;
+    countrySelected({ name, isoCode, phonecode, flag, currency, timezones }) {
+      this.name = name;
+      this.isoCode = isoCode;
+      this.phonecode = phonecode;
+      this.flag = flag;
+      this.currency = currency;
+      this.timezones = timezones;
+      console.log(name, isoCode, phonecode, flag, currency, timezones)
     },
-    test() {
-      this.defaultCountry = this.defaultCountry === "TR" ? "AL" : "TR";
-    }
   }
 }
 </script>
@@ -61,10 +77,10 @@ export default {
   margin-top: 6vh;
 }
 .title {
-  margin-bottom: 2.5vh;
+  margin-bottom: 3vh;
 }
 .description {
-  margin-top: 2.5vh;
+  margin-top: 3vh;
   font-weight: 700;
 }
 </style>

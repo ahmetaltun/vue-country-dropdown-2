@@ -4,10 +4,10 @@
   "description": "Country Dropdown for Vue@2",
   "author": "Ahmet ALTUN <hi@ahmetaltun.dev>",
   "license": "MIT",
-  "homepage": "https://github.com/ahmetaltun/vue-country-dropdown2/",
+  "homepage": "https://github.com/ahmetaltun/vue-country-dropdown-2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmetaltun/vue-country-dropdown2.git"
+    "url": "git+https://github.com/ahmetaltun/vue-country-dropdown-2.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -41,10 +41,12 @@
     "vue-template-compiler": "^2.7.9"
   },
   "keywords": [
-    "vue",
     "telephone",
     "phone",
     "country",
+    "country dropdown",
+    "vue country dropdown",
+    "vue country dropdown 2",
     "vue-country-code",
     "phone code",
     "country code",

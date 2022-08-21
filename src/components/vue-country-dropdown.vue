@@ -58,6 +58,7 @@ import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 
 export default {
+  name: "vue-country-dropdown-2",
   components: {
     vSelect,
   },

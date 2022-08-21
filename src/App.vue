@@ -58,7 +58,6 @@ export default {
       this.flag = flag;
       this.currency = currency;
       this.timezones = timezones;
-      console.log(name, isoCode, phonecode, flag, currency, timezones)
     },
   }
 }

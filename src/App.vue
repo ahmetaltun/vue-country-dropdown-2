@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2 class="title">Vue Country Dropdown 2</h2>
+    <vue-country-dropdown-2 
+      :showNotSelectedOption="true"
+      :defaultCountry="'TR'"
+      :immediateCallSelectEvent="true"
+      @onSelect="countrySelected"
+    />
+    <div class="description" v-if="country">
+      {{ 
+        `{ 
+          flag: "${country.flag}", 
+          name: "${country.name}", 
+          isoCode: "${country.isoCode}", 
+          phoneCode: "${country.phonecode}" 
+        }` 
+      }}
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VueCountryDropdown2 from './components/vue-country-dropdown.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VueCountryDropdown2,
+  },
+  data() {
+    return {
+      country: null,
+    }
+  },
+  methods: {
+    countrySelected(country) {
+      this.country = country;
+    },
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 6vh;
+}
+.title {
+  margin-bottom: 2.5vh;
+}
+.description {
+  margin-top: 2.5vh;
+  font-weight: 700;
 }
 </style>

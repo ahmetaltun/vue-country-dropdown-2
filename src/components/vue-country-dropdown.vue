@@ -22,14 +22,14 @@
       <!-- Selected Template -->
       <template #selected-option="country">
         <div class="selected-option">
-          <span class="flag" v-if="country.flag && enabledFlags">
-            {{ country.flag }}
+          <span class="flag" v-if="country.emoji && enabledFlags">
+            {{ country.emoji }}
           </span>
-          <span class="phonecode" v-if="country.phonecode && enabledPhonecode">
-            {{ country.phonecode }}
+          <span class="phonecode" v-if="country.phone_code && enabledPhonecode">
+            {{ country.phone_code }}
           </span>
           <span class="name" v-if="country.name && enabledName">
-            {{ country.name }}
+            {{ CountryName(country) }}
           </span>
         </div>
       </template>
@@ -37,14 +37,14 @@
       <!-- Option Template -->
       <template #option="country">
         <div class="option">
-          <span class="flag" v-if="country.flag && enabledFlags">
-            {{ country.flag }}
+          <span class="flag" v-if="country.emoji && enabledFlags">
+            {{ country.emoji }}
           </span>
           <span class="name" v-if="country.name && enabledName">
-            {{ country.name }}
+            {{ CountryName(country) }}
           </span>
-          <span class="phonecode" v-if="country.phonecode && enabledPhonecode">
-            {{ country.phonecode }}
+          <span class="phonecode" v-if="country.phone_code && enabledPhonecode">
+            {{ country.phone_code }}
           </span>
         </div>
       </template>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { Country }  from 'country-state-city';
+import Countries from '../data/countries.json';
 import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 
@@ -135,21 +135,37 @@ export default {
       type: String,
       default: "Not selected"
     },
+    countryNameTranslation: {
+      type: String,
+      default: null
+    }
   },
   data() {
     return {
       selected: null,
       countries: [],
       notSelectedOption: {
-        isoCode: null,
+        id: 0,
         name: this.notSelectedOptionText,
-        phonecode: null,
-        flag: null,
-        currency: null,
-        latitude: null,
-        longitude: null,
-        timezones: []
-      }
+        iso3: "",
+        iso2: "",
+        numeric_code: "",
+        phone_code: "",
+        capital: "",
+        currency: "",
+        currency_name: "",
+        currency_symbol: "",
+        tld: "",
+        native: "",
+        region: "",
+        subregion: "",
+        timezones: [],
+        translations: {},
+        latitude: "",
+        longitude: "",
+        emoji: "",
+        emojiU: ""
+      },
     }
   },
   created() {
@@ -167,11 +183,11 @@ export default {
   },
   methods: {
     getCountries() {
-      this.countries = Country.getAllCountries().map(
+      this.countries = Countries.map(
         c => {
           return {
             ...c,
-            phonecode: this.fixPhoneCode(c.phonecode),
+            phone_code: this.fixPhoneCode(c.phone_code),
           }
         }
       );
@@ -180,7 +196,7 @@ export default {
       // by isoCode
       if(this.defaultCountry) {
         this.selected = this.countries.find(
-          c => c.isoCode === this.defaultCountry
+          c => c.iso2 === this.defaultCountry
         )
       }
     },
@@ -196,7 +212,7 @@ export default {
       // by isoCode
       if(this.defaultCountryByPhoneCode) {
         this.selected = this.countries.find(
-          c => c.phonecode === this.defaultCountryByPhoneCode
+          c => c.phone_code === this.defaultCountryByPhoneCode
         )
       }
     },
@@ -205,7 +221,7 @@ export default {
         const preferredCountries = [];
         this.countries = this.countries.map(
           c => {
-            if(this.preferredCountries.includes(c.isoCode)) {
+            if(this.preferredCountries.includes(c.iso2)) {
               preferredCountries.push(c);
               return;
             } else {
@@ -222,14 +238,14 @@ export default {
     OnlyCountries() {
       if(this.onlyCountries.length) {
         this.countries = this.countries.filter(
-          c => this.onlyCountries.includes(c.isoCode)
+          c => this.onlyCountries.includes(c.iso2)
         )
       }
     },
     IgnoredCountries() {
       if(this.ignoredCountries.length) {
         this.countries = this.countries.filter(
-          c => !this.ignoredCountries.includes(c.isoCode)
+          c => !this.ignoredCountries.includes(c.iso2)
         )
       }
     },
@@ -259,9 +275,17 @@ export default {
     option_deselected(country) {
       this.$emit('option_deselected', country);
     },
-    fixPhoneCode(phonecode) {
-      phonecode = phonecode.includes('+') ? phonecode : `+${phonecode}`
-      return phonecode.includes("and") ? phonecode.split("and").at(0).trim() : phonecode;
+    CountryName(country) {
+      if(this.countryNameTranslation) {
+        if(country.translations && country.translations[this.countryNameTranslation]) {
+          return country.translations[this.countryNameTranslation];
+        }
+      }
+      return country.name;
+    },
+    fixPhoneCode(phone_code) {
+      phone_code = phone_code.includes('+') ? phone_code : `+${phone_code}`
+      return phone_code.includes("and") ? phone_code.split("and").at(0).trim() : phone_code;
     }
   },
   watch: {

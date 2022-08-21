@@ -17,14 +17,15 @@
       :searchable="true"
       :closeOnSelect="true"
       :placeholder="'Select a country'"
+      :countryNameTranslation="'tr'"
     />
-    <div class="description">
+    <div class="description" v-if="country">
       {{ 
         `{ 
-          flag: "${flag}", 
-          name: "${name}", 
-          isoCode: "${isoCode}", 
-          phoneCode: "${phonecode}" 
+          flag: "${country.emoji}", 
+          name: "${country.name}", 
+          isoCode: "${country.iso2}", 
+          phoneCode: "${country.phone_code}" 
         }` 
       }}
     </div>
@@ -41,23 +42,13 @@ export default {
   },
   data() {
     return {
-      name: "",
-      isoCode: "",
-      phonecode: "",
-      flag: "",
-      currency: "",
-      timezones: [],
+      country: {},
       defaultCountry: "TR",
     }
   },
   methods: {
-    countrySelected({ name, isoCode, phonecode, flag, currency, timezones }) {
-      this.name = name;
-      this.isoCode = isoCode;
-      this.phonecode = phonecode;
-      this.flag = flag;
-      this.currency = currency;
-      this.timezones = timezones;
+    countrySelected(country) {
+      this.country = country;
     },
   }
 }

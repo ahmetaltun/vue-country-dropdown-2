@@ -19,8 +19,14 @@ export default {
     exports: "named",
     name: "VueCountryDropdown2",
     file: "dist/vue-country-dropdown-2.js",
-    format: "umd"
+    format: "umd",
+    globals: {
+      "country-state-city": "CountryStateCity",
+    }
   },
+  external: [
+    "country-state-city",
+  ],
   plugins: [
     alias({
       entries: {
@@ -38,7 +44,8 @@ export default {
     }),
     commonjs(),
     replace({
-      VERSION: JSON.stringify(config.version)
+      VERSION: JSON.stringify(config.version),
+      preventAssignment: true,
     }),
     postcss(),
     analyze(),

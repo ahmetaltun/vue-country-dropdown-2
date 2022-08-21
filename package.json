@@ -1,6 +1,6 @@
 {
   "name": "vue-country-dropdown-2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Country Dropdown for Vue@2",
   "author": "Ahmet ALTUN <hi@ahmetaltun.dev>",
   "license": "MIT",
@@ -19,7 +19,6 @@
   ],
   "main": "dist/vue-country-dropdown-2.js",
   "dependencies": {
-    "country-state-city": "^3.1.0",
     "vue-select": "^3.20.0"
   },
   "devDependencies": {

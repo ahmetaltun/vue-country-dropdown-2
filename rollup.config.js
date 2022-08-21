@@ -24,9 +24,6 @@ export default {
       "country-state-city": "CountryStateCity",
     }
   },
-  external: [
-    "country-state-city",
-  ],
   plugins: [
     alias({
       entries: {

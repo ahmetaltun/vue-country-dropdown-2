@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import Countries from '../data/countries.json';
+import Countries from '../data/countries.js';
 import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 

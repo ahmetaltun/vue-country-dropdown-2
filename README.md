@@ -72,7 +72,7 @@ Country dropdown for Vue@2.
   </script>
   ```
 
-### Props
+## Props
 
 | Property value             | Type      | Default value                 | Description                                                                        |
 | -------------------------- | --------- | ----------------------------- | ---------------------------------------------------------------------------------- |
@@ -96,7 +96,7 @@ Country dropdown for Vue@2.
 | `notSelectedOptionText`    | `String`  | `Not Selected`                | Replace `Not Selected` text with another string.                                   |
 
 
-### Events
+## Events
 
 | Property value      | Arguments | Description                                                                                                                     |
 | ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- |

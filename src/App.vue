@@ -3,7 +3,7 @@
     <h2 class="title">Vue Country Dropdown 2</h2>
     <vue-country-dropdown-2 
       :showNotSelectedOption="true"
-      :defaultCountry="'TR'"
+      :defaultCountry="defaultCountry"
       :immediateCallSelectEvent="true"
       @onSelect="countrySelected"
     />
@@ -17,6 +17,9 @@
         }` 
       }}
     </div>
+    <button @click="test">
+      Test
+    </button>
   </div>
 </template>
 
@@ -31,12 +34,16 @@ export default {
   data() {
     return {
       country: null,
+      defaultCountry: "TR",
     }
   },
   methods: {
     countrySelected(country) {
       this.country = country;
     },
+    test() {
+      this.defaultCountry = this.defaultCountry === "TR" ? "AL" : "TR";
+    }
   }
 }
 </script>

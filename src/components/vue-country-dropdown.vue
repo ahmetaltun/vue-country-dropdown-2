@@ -263,6 +263,17 @@ export default {
       return phonecode.includes("and") ? phonecode.split("and").at(0).trim() : phonecode;
     }
   },
+  watch: {
+    defaultCountry: function() {
+      this.DefaultCountry();
+    },
+    defaultCountryByName: function() {
+      this.DefaultCountryByName();
+    },
+    defaultCountryByPhoneCode: function() {
+      this.DefaultCountryByPhoneCode();
+    }
+  }
 }
 </script>
 

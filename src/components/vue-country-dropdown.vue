@@ -40,7 +40,11 @@
           <span class="flag" v-if="country.emoji && enabledFlags">
             {{ country.emoji }}
           </span>
-          <span class="name" v-if="country.name && enabledName">
+          <span 
+            class="name" 
+            v-if="country.name && enabledName" 
+            :class="{ 'bold-text': preferredCountries.length && preferredCountries.includes(country.iso2) }"
+          >
             {{ CountryName(country) }}
           </span>
           <span class="phonecode" v-if="country.phone_code && enabledPhonecode">
@@ -320,6 +324,9 @@ export default {
 }
 .name {
 
+}
+.bold-text {
+  font-weight: 700;
 }
 
 :deep(.vs__dropdown-menu) {

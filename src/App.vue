@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <!-- Title -->
     <h2 class="title">Vue Country Dropdown 2</h2>
+    <!-- Dropdown -->
     <vue-country-dropdown
       @onSelect="countrySelected"
       :preferredCountries="['TR', 'US', 'GB']"
@@ -17,28 +19,32 @@
       :searchable="true"
       :closeOnSelect="true"
       :placeholder="'Select a country'"
-      :countryNameTranslation="'tr'"
     />
+    <!-- Selected Item Details -->
     <div class="description" v-if="country">
       {{ 
         `{ 
           flag: "${country.emoji}", 
           name: "${country.name}", 
-          isoCode: "${country.iso2}", 
-          phoneCode: "${country.phone_code}" 
+          iso2: "${country.iso2}", 
+          phone_code: "${country.phone_code}" 
         }` 
       }}
     </div>
+    <!-- Links -->
+    <links />
   </div>
 </template>
 
 <script>
 import VueCountryDropdown from './components/vue-country-dropdown.vue';
+import Links from './components/links.vue';
 
 export default {
   name: 'App',
   components: {
     VueCountryDropdown,
+    Links
   },
   data() {
     return {

@@ -14,7 +14,7 @@ const config = require("./package.json");
 // const projectRootDir = path.resolve(__dirname);
 
 export default {
-  input: "src/main.js",
+  input: "src/index.js",
   output: {
     exports: "named",
     name: "VueCountryDropdown2",

@@ -183,7 +183,7 @@ export default {
     this.OnlyCountries();
     this.IgnoredCountries();
     this.ShowNotSelectedOption();
-    this.immediateCallSelectEvent && this.onSelect(this.selected)
+    this.ImmediateCallSelect();
   },
   methods: {
     getCountries() {
@@ -290,17 +290,23 @@ export default {
     fixPhoneCode(phone_code) {
       phone_code = phone_code.includes('+') ? phone_code : `+${phone_code}`
       return phone_code.includes("and") ? phone_code.split("and").at(0).trim() : phone_code;
+    },
+    ImmediateCallSelect() {
+      this.immediateCallSelectEvent && this.onSelect(this.selected);
     }
   },
   watch: {
     defaultCountry: function() {
       this.DefaultCountry();
+      this.onSelect(this.selected);
     },
     defaultCountryByName: function() {
       this.DefaultCountryByName();
+      this.onSelect(this.selected);
     },
     defaultCountryByPhoneCode: function() {
       this.DefaultCountryByPhoneCode();
+      this.onSelect(this.selected);
     }
   }
 }

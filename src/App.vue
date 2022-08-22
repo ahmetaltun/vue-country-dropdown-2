@@ -33,6 +33,9 @@
     </div>
     <!-- Links -->
     <links />
+    <button @click="test">
+      Test
+    </button>
   </div>
 </template>
 
@@ -55,7 +58,11 @@ export default {
   methods: {
     countrySelected(country) {
       this.country = country;
+      console.log(country)
     },
+    test() {
+      this.defaultCountry === "TR" ? this.defaultCountry = "AL" : this.defaultCountry = "TR";
+    }
   }
 }
 </script>

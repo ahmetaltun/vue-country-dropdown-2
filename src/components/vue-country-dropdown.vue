@@ -222,21 +222,13 @@ export default {
     },
     PreferredCountries() {
       if(this.preferredCountries.length) {
-        const preferredCountries = [];
-        this.countries = this.countries.map(
-          c => {
-            if(this.preferredCountries.includes(c.iso2)) {
-              preferredCountries.push(c);
-              return;
-            } else {
-              return c;
-            }
-          }
+        const preferredCountries = this.countries.filter(
+          c => this.preferredCountries.includes(c.iso2)
         );
-        this.countries = [
-          ...preferredCountries,
-          ...this.countries,
-        ];
+        this.countries = this.countries.filter(
+          c => !this.preferredCountries.includes(c.iso2)
+        );
+        this.countries.unshift(...preferredCountries);
       }
     },
     OnlyCountries() {

@@ -139,6 +139,10 @@ export default {
       type: String,
       default: "Not selected"
     },
+    selectFirstItem: {
+      type: Boolean,
+      default: false
+    },
     countryNameTranslation: {
       type: String,
       default: null
@@ -176,13 +180,14 @@ export default {
     this.getCountries();
   },
   mounted() {
-    this.DefaultCountry();
-    this.DefaultCountryByName();
-    this.DefaultCountryByPhoneCode();
     this.PreferredCountries();
     this.OnlyCountries();
     this.IgnoredCountries();
     this.ShowNotSelectedOption();
+    this.SelectFirstItem();
+    this.DefaultCountry();
+    this.DefaultCountryByName();
+    this.DefaultCountryByPhoneCode();
     this.ImmediateCallSelect();
   },
   methods: {
@@ -202,6 +207,9 @@ export default {
         this.selected = this.countries.find(
           c => c.iso2 === this.defaultCountry
         )
+        if(!this.selected) {
+          this.SelectFirstItem();
+        }
       }
     },
     DefaultCountryByName() {
@@ -210,6 +218,9 @@ export default {
         this.selected = this.countries.find(
           c => c.name === this.defaultCountryByName
         )
+        if(!this.selected) {
+          this.SelectFirstItem();
+        }
       }
     },
     DefaultCountryByPhoneCode() {
@@ -218,6 +229,9 @@ export default {
         this.selected = this.countries.find(
           c => c.phone_code === this.defaultCountryByPhoneCode
         )
+        if(!this.selected) {
+          this.SelectFirstItem();
+        }
       }
     },
     PreferredCountries() {
@@ -278,6 +292,11 @@ export default {
         }
       }
       return country.name;
+    },
+    SelectFirstItem() {
+      if(this.selectFirstItem) {
+        this.selected = this.countries.at(0);
+      }
     },
     fixPhoneCode(phone_code) {
       phone_code = phone_code.includes('+') ? phone_code : `+${phone_code}`

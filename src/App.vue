@@ -7,6 +7,7 @@
       @onSelect="countrySelected"
       :preferredCountries="['TR', 'US', 'GB']"
       :defaultCountry="defaultCountry"
+      :selectFirstItem="true"
       :immediateCallSelectEvent="true"
       :enabledFlags="true"
       :enabledName="true"

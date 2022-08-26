@@ -266,6 +266,7 @@ export default {
     },
     onSelect(country) {
       this.$emit('onSelect', country);
+      this.$emit('input', country);
     },
     open() {
       this.$emit('open');

@@ -4,7 +4,7 @@
     <h2 class="title">Vue Country Dropdown 2</h2>
     <!-- Dropdown -->
     <vue-country-dropdown
-      @onSelect="countrySelected"
+      v-model="country"
       :preferredCountries="['TR', 'US', 'GB']"
       :defaultCountry="defaultCountry"
       :selectFirstItem="true"

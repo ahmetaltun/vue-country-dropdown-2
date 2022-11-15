@@ -159,6 +159,5 @@ Country dropdown for Vue@2.
 ## Highlights & Credits
 
 - Data source: [dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database)
-- Country, state, city: [harpreetkhalsagtbit/country-state-city](https://github.com/harpreetkhalsagtbit/country-state-city)
 - Vue select: [sagalbot/vue-select](https://github.com/sagalbot/vue-select)
 - Vue app created by [vue-cli](https://github.com/vuejs/vue-cli).

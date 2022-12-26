@@ -1,6 +1,7 @@
 {
   "name": "vue-country-dropdown-2",
-  "version": "1.0.10",
+  "version": "1.0.11",
+  "type": "module",
   "description": "Country Dropdown for Vue@2",
   "author": "Ahmet ALTUN <hi@ahmetaltun.dev>",
   "license": "MIT",
@@ -19,10 +20,10 @@
     "dist"
   ],
   "main": "./dist/vue-country-dropdown-2.umd.cjs",
-  "module": "./dist/vue-country-dropdown-2.js",
+  "module": "./dist/vue-country-dropdown-2.mjs",
   "exports": {
     ".": {
-      "import": "./dist/vue-country-dropdown-2.js",
+      "import": "./dist/vue-country-dropdown-2.mjs",
       "require": "./dist/vue-country-dropdown-2.umd.cjs"
     }
   },

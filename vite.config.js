@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.js'),
-      name: 'VueCountryDropdown2',
+      name: 'vue-country-dropdown-2',
       fileName: 'vue-country-dropdown-2',
       formats: ["umd", "es"]
     },

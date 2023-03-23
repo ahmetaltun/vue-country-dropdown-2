@@ -12724,7 +12724,9 @@ function x(a, p, g, l, d, y, s, r) {
   p && (o.render = p, o.staticRenderFns = g, o._compiled = !0), l && (o.functional = !0), y && (o._scopeId = "data-v-" + y);
   var c;
   if (s ? (c = function(b) {
-    b = b || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext, !b && typeof __VUE_SSR_CONTEXT__ < "u" && (b = __VUE_SSR_CONTEXT__), d && d.call(this, b), b && b._registeredComponents && b._registeredComponents.add(s);
+    b = b || // cached call
+    this.$vnode && this.$vnode.ssrContext || // stateful
+    this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext, !b && typeof __VUE_SSR_CONTEXT__ < "u" && (b = __VUE_SSR_CONTEXT__), d && d.call(this, b), b && b._registeredComponents && b._registeredComponents.add(s);
   }, o._ssrRegister = c) : d && (c = r ? function() {
     d.call(
       this,

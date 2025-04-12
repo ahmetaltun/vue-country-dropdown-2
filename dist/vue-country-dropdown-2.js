@@ -1,4 +1,4 @@
-const V = [
+const K = [
   {
     id: 1,
     name: "Afghanistan",
@@ -12224,534 +12224,416 @@ const V = [
     emojiU: "U+1F1FF U+1F1FC"
   }
 ];
-var H = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function W(a) {
-  return a && a.__esModule && Object.prototype.hasOwnProperty.call(a, "default") ? a.default : a;
+function L(t) {
+  return t && t.__esModule && Object.prototype.hasOwnProperty.call(t, "default") ? t.default : t;
 }
-var E = {}, $ = {
-  get exports() {
-    return E;
-  },
-  set exports(a) {
-    E = a;
-  }
-};
-(function(a, p) {
-  (function(g, l) {
-    a.exports = l();
-  })(typeof self < "u" ? self : H, function() {
-    return (() => {
-      var g = { 646: (s) => {
-        s.exports = function(r) {
-          if (Array.isArray(r)) {
-            for (var o = 0, c = new Array(r.length); o < r.length; o++)
-              c[o] = r[o];
-            return c;
-          }
-        };
-      }, 713: (s) => {
-        s.exports = function(r, o, c) {
-          return o in r ? Object.defineProperty(r, o, { value: c, enumerable: !0, configurable: !0, writable: !0 }) : r[o] = c, r;
-        };
-      }, 860: (s) => {
-        s.exports = function(r) {
-          if (Symbol.iterator in Object(r) || Object.prototype.toString.call(r) === "[object Arguments]")
-            return Array.from(r);
-        };
-      }, 206: (s) => {
-        s.exports = function() {
-          throw new TypeError("Invalid attempt to spread non-iterable instance");
-        };
-      }, 319: (s, r, o) => {
-        var c = o(646), U = o(860), T = o(206);
-        s.exports = function(b) {
-          return c(b) || U(b) || T();
-        };
-      }, 8: (s) => {
-        function r(o) {
-          return typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? s.exports = r = function(c) {
-            return typeof c;
-          } : s.exports = r = function(c) {
-            return c && typeof Symbol == "function" && c.constructor === Symbol && c !== Symbol.prototype ? "symbol" : typeof c;
-          }, r(o);
-        }
-        s.exports = r;
-      } }, l = {};
-      function d(s) {
-        var r = l[s];
-        if (r !== void 0)
-          return r.exports;
-        var o = l[s] = { exports: {} };
-        return g[s](o, o.exports, d), o.exports;
-      }
-      d.n = (s) => {
-        var r = s && s.__esModule ? () => s.default : () => s;
-        return d.d(r, { a: r }), r;
-      }, d.d = (s, r) => {
-        for (var o in r)
-          d.o(r, o) && !d.o(s, o) && Object.defineProperty(s, o, { enumerable: !0, get: r[o] });
-      }, d.o = (s, r) => Object.prototype.hasOwnProperty.call(s, r), d.r = (s) => {
-        typeof Symbol < "u" && Symbol.toStringTag && Object.defineProperty(s, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(s, "__esModule", { value: !0 });
-      };
-      var y = {};
+var A = { exports: {} }, w = A.exports, k;
+function V() {
+  return k || (k = 1, function(t, r) {
+    (function(g, l) {
+      t.exports = l();
+    })(typeof self < "u" ? self : w, function() {
       return (() => {
-        d.r(y), d.d(y, { VueSelect: () => M, default: () => w, mixins: () => L });
-        var s = d(319), r = d.n(s), o = d(8), c = d.n(o), U = d(713), T = d.n(U);
-        const b = { props: { autoscroll: { type: Boolean, default: !0 } }, watch: { typeAheadPointer: function() {
-          this.autoscroll && this.maybeAdjustScroll();
-        }, open: function(e) {
-          var i = this;
-          this.autoscroll && e && this.$nextTick(function() {
-            return i.maybeAdjustScroll();
-          });
-        } }, methods: { maybeAdjustScroll: function() {
-          var e, i = ((e = this.$refs.dropdownMenu) === null || e === void 0 ? void 0 : e.children[this.typeAheadPointer]) || !1;
-          if (i) {
-            var n = this.getDropdownViewport(), t = i.getBoundingClientRect(), m = t.top, u = t.bottom, A = t.height;
-            if (m < n.top)
-              return this.$refs.dropdownMenu.scrollTop = i.offsetTop;
-            if (u > n.bottom)
-              return this.$refs.dropdownMenu.scrollTop = i.offsetTop - (n.height - A);
+        var g = { 646: (s) => {
+          s.exports = function(o) {
+            if (Array.isArray(o)) {
+              for (var m = 0, d = new Array(o.length); m < o.length; m++) d[m] = o[m];
+              return d;
+            }
+          };
+        }, 713: (s) => {
+          s.exports = function(o, m, d) {
+            return m in o ? Object.defineProperty(o, m, { value: d, enumerable: !0, configurable: !0, writable: !0 }) : o[m] = d, o;
+          };
+        }, 860: (s) => {
+          s.exports = function(o) {
+            if (Symbol.iterator in Object(o) || Object.prototype.toString.call(o) === "[object Arguments]") return Array.from(o);
+          };
+        }, 206: (s) => {
+          s.exports = function() {
+            throw new TypeError("Invalid attempt to spread non-iterable instance");
+          };
+        }, 319: (s, o, m) => {
+          var d = m(646), U = m(860), h = m(206);
+          s.exports = function(N) {
+            return d(N) || U(N) || h();
+          };
+        }, 8: (s) => {
+          function o(m) {
+            return typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? s.exports = o = function(d) {
+              return typeof d;
+            } : s.exports = o = function(d) {
+              return d && typeof Symbol == "function" && d.constructor === Symbol && d !== Symbol.prototype ? "symbol" : typeof d;
+            }, o(m);
           }
-        }, getDropdownViewport: function() {
-          return this.$refs.dropdownMenu ? this.$refs.dropdownMenu.getBoundingClientRect() : { height: 0, top: 0, bottom: 0 };
-        } } }, _ = { data: function() {
-          return { typeAheadPointer: -1 };
-        }, watch: { filteredOptions: function() {
-          for (var e = 0; e < this.filteredOptions.length; e++)
-            if (this.selectable(this.filteredOptions[e])) {
-              this.typeAheadPointer = e;
-              break;
-            }
-        }, open: function(e) {
-          e && this.typeAheadToLastSelected();
-        }, selectedValue: function() {
-          this.open && this.typeAheadToLastSelected();
-        } }, methods: { typeAheadUp: function() {
-          for (var e = this.typeAheadPointer - 1; e >= 0; e--)
-            if (this.selectable(this.filteredOptions[e])) {
-              this.typeAheadPointer = e;
-              break;
-            }
-        }, typeAheadDown: function() {
-          for (var e = this.typeAheadPointer + 1; e < this.filteredOptions.length; e++)
-            if (this.selectable(this.filteredOptions[e])) {
-              this.typeAheadPointer = e;
-              break;
-            }
-        }, typeAheadSelect: function() {
-          var e = this.filteredOptions[this.typeAheadPointer];
-          e && this.selectable(e) && this.select(e);
-        }, typeAheadToLastSelected: function() {
-          var e = this.selectedValue.length !== 0 ? this.filteredOptions.indexOf(this.selectedValue[this.selectedValue.length - 1]) : -1;
-          e !== -1 && (this.typeAheadPointer = e);
-        } } }, z = { props: { loading: { type: Boolean, default: !1 } }, data: function() {
-          return { mutableLoading: !1 };
-        }, watch: { search: function() {
-          this.$emit("search", this.search, this.toggleLoading);
-        }, loading: function(e) {
-          this.mutableLoading = e;
-        } }, methods: { toggleLoading: function() {
-          var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null;
-          return this.mutableLoading = e ?? !this.mutableLoading;
-        } } };
-        function S(e, i, n, t, m, u, A, v) {
-          var h, f = typeof e == "function" ? e.options : e;
-          if (i && (f.render = i, f.staticRenderFns = n, f._compiled = !0), t && (f.functional = !0), u && (f._scopeId = "data-v-" + u), A ? (h = function(N) {
-            (N = N || this.$vnode && this.$vnode.ssrContext || this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) || typeof __VUE_SSR_CONTEXT__ > "u" || (N = __VUE_SSR_CONTEXT__), m && m.call(this, N), N && N._registeredComponents && N._registeredComponents.add(A);
-          }, f._ssrRegister = h) : m && (h = v ? function() {
-            m.call(this, (f.functional ? this.parent : this).$root.$options.shadowRoot);
-          } : m), h)
-            if (f.functional) {
-              f._injectStyles = h;
-              var O = f.render;
-              f.render = function(N, P) {
-                return h.call(P), O(N, P);
-              };
-            } else {
-              var B = f.beforeCreate;
-              f.beforeCreate = B ? [].concat(B, h) : [h];
-            }
-          return { exports: e, options: f };
+          s.exports = o;
+        } }, l = {};
+        function f(s) {
+          var o = l[s];
+          if (o !== void 0) return o.exports;
+          var m = l[s] = { exports: {} };
+          return g[s](m, m.exports, f), m.exports;
         }
-        const j = { Deselect: S({}, function() {
-          var e = this.$createElement, i = this._self._c || e;
-          return i("svg", { attrs: { xmlns: "http://www.w3.org/2000/svg", width: "10", height: "10" } }, [i("path", { attrs: { d: "M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z" } })]);
-        }, [], !1, null, null, null).exports, OpenIndicator: S({}, function() {
-          var e = this.$createElement, i = this._self._c || e;
-          return i("svg", { attrs: { xmlns: "http://www.w3.org/2000/svg", width: "14", height: "10" } }, [i("path", { attrs: { d: "M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z" } })]);
-        }, [], !1, null, null, null).exports }, I = { inserted: function(e, i, n) {
-          var t = n.context;
-          if (t.appendToBody) {
-            var m = t.$refs.toggle.getBoundingClientRect(), u = m.height, A = m.top, v = m.left, h = m.width, f = window.scrollX || window.pageXOffset, O = window.scrollY || window.pageYOffset;
-            e.unbindPosition = t.calculatePosition(e, t, { width: h + "px", left: f + v + "px", top: O + A + u + "px" }), document.body.appendChild(e);
-          }
-        }, unbind: function(e, i, n) {
-          n.context.appendToBody && (e.unbindPosition && typeof e.unbindPosition == "function" && e.unbindPosition(), e.parentNode && e.parentNode.removeChild(e));
-        } }, D = function(e) {
-          var i = {};
-          return Object.keys(e).sort().forEach(function(n) {
-            i[n] = e[n];
-          }), JSON.stringify(i);
+        f.n = (s) => {
+          var o = s && s.__esModule ? () => s.default : () => s;
+          return f.d(o, { a: o }), o;
+        }, f.d = (s, o) => {
+          for (var m in o) f.o(o, m) && !f.o(s, m) && Object.defineProperty(s, m, { enumerable: !0, get: o[m] });
+        }, f.o = (s, o) => Object.prototype.hasOwnProperty.call(s, o), f.r = (s) => {
+          typeof Symbol < "u" && Symbol.toStringTag && Object.defineProperty(s, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(s, "__esModule", { value: !0 });
         };
-        var R = 0;
-        const K = function() {
-          return ++R;
-        };
-        function k(e, i) {
-          var n = Object.keys(e);
-          if (Object.getOwnPropertySymbols) {
-            var t = Object.getOwnPropertySymbols(e);
-            i && (t = t.filter(function(m) {
-              return Object.getOwnPropertyDescriptor(e, m).enumerable;
-            })), n.push.apply(n, t);
-          }
-          return n;
-        }
-        function C(e) {
-          for (var i = 1; i < arguments.length; i++) {
-            var n = arguments[i] != null ? arguments[i] : {};
-            i % 2 ? k(Object(n), !0).forEach(function(t) {
-              T()(e, t, n[t]);
-            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : k(Object(n)).forEach(function(t) {
-              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+        var p = {};
+        return (() => {
+          f.r(p), f.d(p, { VueSelect: () => E, default: () => D, mixins: () => I });
+          var s = f(319), o = f.n(s), m = f(8), d = f.n(m), U = f(713), h = f.n(U);
+          const N = { props: { autoscroll: { type: Boolean, default: !0 } }, watch: { typeAheadPointer: function() {
+            this.autoscroll && this.maybeAdjustScroll();
+          }, open: function(e) {
+            var a = this;
+            this.autoscroll && e && this.$nextTick(function() {
+              return a.maybeAdjustScroll();
             });
+          } }, methods: { maybeAdjustScroll: function() {
+            var e, a = ((e = this.$refs.dropdownMenu) === null || e === void 0 ? void 0 : e.children[this.typeAheadPointer]) || !1;
+            if (a) {
+              var i = this.getDropdownViewport(), n = a.getBoundingClientRect(), c = n.top, u = n.bottom, y = n.height;
+              if (c < i.top) return this.$refs.dropdownMenu.scrollTop = a.offsetTop;
+              if (u > i.bottom) return this.$refs.dropdownMenu.scrollTop = a.offsetTop - (i.height - y);
+            }
+          }, getDropdownViewport: function() {
+            return this.$refs.dropdownMenu ? this.$refs.dropdownMenu.getBoundingClientRect() : { height: 0, top: 0, bottom: 0 };
+          } } }, _ = { data: function() {
+            return { typeAheadPointer: -1 };
+          }, watch: { filteredOptions: function() {
+            for (var e = 0; e < this.filteredOptions.length; e++) if (this.selectable(this.filteredOptions[e])) {
+              this.typeAheadPointer = e;
+              break;
+            }
+          }, open: function(e) {
+            e && this.typeAheadToLastSelected();
+          }, selectedValue: function() {
+            this.open && this.typeAheadToLastSelected();
+          } }, methods: { typeAheadUp: function() {
+            for (var e = this.typeAheadPointer - 1; e >= 0; e--) if (this.selectable(this.filteredOptions[e])) {
+              this.typeAheadPointer = e;
+              break;
+            }
+          }, typeAheadDown: function() {
+            for (var e = this.typeAheadPointer + 1; e < this.filteredOptions.length; e++) if (this.selectable(this.filteredOptions[e])) {
+              this.typeAheadPointer = e;
+              break;
+            }
+          }, typeAheadSelect: function() {
+            var e = this.filteredOptions[this.typeAheadPointer];
+            e && this.selectable(e) && this.select(e);
+          }, typeAheadToLastSelected: function() {
+            var e = this.selectedValue.length !== 0 ? this.filteredOptions.indexOf(this.selectedValue[this.selectedValue.length - 1]) : -1;
+            e !== -1 && (this.typeAheadPointer = e);
+          } } }, v = { props: { loading: { type: Boolean, default: !1 } }, data: function() {
+            return { mutableLoading: !1 };
+          }, watch: { search: function() {
+            this.$emit("search", this.search, this.toggleLoading);
+          }, loading: function(e) {
+            this.mutableLoading = e;
+          } }, methods: { toggleLoading: function() {
+            var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null;
+            return this.mutableLoading = e ?? !this.mutableLoading;
+          } } };
+          function z(e, a, i, n, c, u, y, j) {
+            var C, b = typeof e == "function" ? e.options : e;
+            return a && (b.render = a, b.staticRenderFns = i, b._compiled = !0), { exports: e, options: b };
           }
-          return e;
-        }
-        const M = S({ components: C({}, j), directives: { appendToBody: I }, mixins: [b, _, z], props: { value: {}, components: { type: Object, default: function() {
-          return {};
-        } }, options: { type: Array, default: function() {
-          return [];
-        } }, disabled: { type: Boolean, default: !1 }, clearable: { type: Boolean, default: !0 }, deselectFromDropdown: { type: Boolean, default: !1 }, searchable: { type: Boolean, default: !0 }, multiple: { type: Boolean, default: !1 }, placeholder: { type: String, default: "" }, transition: { type: String, default: "vs__fade" }, clearSearchOnSelect: { type: Boolean, default: !0 }, closeOnSelect: { type: Boolean, default: !0 }, label: { type: String, default: "label" }, autocomplete: { type: String, default: "off" }, reduce: { type: Function, default: function(e) {
-          return e;
-        } }, selectable: { type: Function, default: function(e) {
-          return !0;
-        } }, getOptionLabel: { type: Function, default: function(e) {
-          return c()(e) === "object" ? e.hasOwnProperty(this.label) ? e[this.label] : console.warn('[vue-select warn]: Label key "option.'.concat(this.label, '" does not') + " exist in options object ".concat(JSON.stringify(e), `.
+          const O = { Deselect: z({}, function() {
+            var e = this.$createElement, a = this._self._c || e;
+            return a("svg", { attrs: { xmlns: "http://www.w3.org/2000/svg", width: "10", height: "10" } }, [a("path", { attrs: { d: "M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z" } })]);
+          }, []).exports, OpenIndicator: z({}, function() {
+            var e = this.$createElement, a = this._self._c || e;
+            return a("svg", { attrs: { xmlns: "http://www.w3.org/2000/svg", width: "14", height: "10" } }, [a("path", { attrs: { d: "M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z" } })]);
+          }, []).exports }, M = { inserted: function(e, a, i) {
+            var n = i.context;
+            if (n.appendToBody) {
+              var c = n.$refs.toggle.getBoundingClientRect(), u = c.height, y = c.top, j = c.left, C = c.width, b = window.scrollX || window.pageXOffset, R = window.scrollY || window.pageYOffset;
+              e.unbindPosition = n.calculatePosition(e, n, { width: C + "px", left: b + j + "px", top: R + y + u + "px" }), document.body.appendChild(e);
+            }
+          }, unbind: function(e, a, i) {
+            i.context.appendToBody && (e.unbindPosition && typeof e.unbindPosition == "function" && e.unbindPosition(), e.parentNode && e.parentNode.removeChild(e));
+          } }, B = function(e) {
+            var a = {};
+            return Object.keys(e).sort().forEach(function(i) {
+              a[i] = e[i];
+            }), JSON.stringify(a);
+          };
+          var P = 0;
+          const G = function() {
+            return ++P;
+          };
+          function F(e, a) {
+            var i = Object.keys(e);
+            if (Object.getOwnPropertySymbols) {
+              var n = Object.getOwnPropertySymbols(e);
+              a && (n = n.filter(function(c) {
+                return Object.getOwnPropertyDescriptor(e, c).enumerable;
+              })), i.push.apply(i, n);
+            }
+            return i;
+          }
+          function T(e) {
+            for (var a = 1; a < arguments.length; a++) {
+              var i = arguments[a] != null ? arguments[a] : {};
+              a % 2 ? F(Object(i), !0).forEach(function(n) {
+                h()(e, n, i[n]);
+              }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i)) : F(Object(i)).forEach(function(n) {
+                Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(i, n));
+              });
+            }
+            return e;
+          }
+          const E = z({ components: T({}, O), directives: { appendToBody: M }, mixins: [N, _, v], props: { value: {}, components: { type: Object, default: function() {
+            return {};
+          } }, options: { type: Array, default: function() {
+            return [];
+          } }, disabled: { type: Boolean, default: !1 }, clearable: { type: Boolean, default: !0 }, deselectFromDropdown: { type: Boolean, default: !1 }, searchable: { type: Boolean, default: !0 }, multiple: { type: Boolean, default: !1 }, placeholder: { type: String, default: "" }, transition: { type: String, default: "vs__fade" }, clearSearchOnSelect: { type: Boolean, default: !0 }, closeOnSelect: { type: Boolean, default: !0 }, label: { type: String, default: "label" }, autocomplete: { type: String, default: "off" }, reduce: { type: Function, default: function(e) {
+            return e;
+          } }, selectable: { type: Function, default: function(e) {
+            return !0;
+          } }, getOptionLabel: { type: Function, default: function(e) {
+            return d()(e) === "object" ? e.hasOwnProperty(this.label) ? e[this.label] : console.warn('[vue-select warn]: Label key "option.'.concat(this.label, '" does not') + " exist in options object ".concat(JSON.stringify(e), `.
 `) + "https://vue-select.org/api/props.html#getoptionlabel") : e;
-        } }, getOptionKey: { type: Function, default: function(e) {
-          if (c()(e) !== "object")
+          } }, getOptionKey: { type: Function, default: function(e) {
+            if (d()(e) !== "object") return e;
+            try {
+              return e.hasOwnProperty("id") ? e.id : B(e);
+            } catch (a) {
+              return console.warn(`[vue-select warn]: Could not stringify this option to generate unique key. Please provide'getOptionKey' prop to return a unique key for each option.
+https://vue-select.org/api/props.html#getoptionkey`, e, a);
+            }
+          } }, onTab: { type: Function, default: function() {
+            this.selectOnTab && !this.isComposing && this.typeAheadSelect();
+          } }, taggable: { type: Boolean, default: !1 }, tabindex: { type: Number, default: null }, pushTags: { type: Boolean, default: !1 }, filterable: { type: Boolean, default: !0 }, filterBy: { type: Function, default: function(e, a, i) {
+            return (a || "").toLocaleLowerCase().indexOf(i.toLocaleLowerCase()) > -1;
+          } }, filter: { type: Function, default: function(e, a) {
+            var i = this;
+            return e.filter(function(n) {
+              var c = i.getOptionLabel(n);
+              return typeof c == "number" && (c = c.toString()), i.filterBy(n, c, a);
+            });
+          } }, createOption: { type: Function, default: function(e) {
+            return d()(this.optionList[0]) === "object" ? h()({}, this.label, e) : e;
+          } }, resetOnOptionsChange: { default: !1, validator: function(e) {
+            return ["function", "boolean"].includes(d()(e));
+          } }, clearSearchOnBlur: { type: Function, default: function(e) {
+            var a = e.clearSearchOnSelect, i = e.multiple;
+            return a && !i;
+          } }, noDrop: { type: Boolean, default: !1 }, inputId: { type: String }, dir: { type: String, default: "auto" }, selectOnTab: { type: Boolean, default: !1 }, selectOnKeyCodes: { type: Array, default: function() {
+            return [13];
+          } }, searchInputQuerySelector: { type: String, default: "[type=search]" }, mapKeydown: { type: Function, default: function(e, a) {
             return e;
-          try {
-            return e.hasOwnProperty("id") ? e.id : D(e);
-          } catch (i) {
-            return console.warn(`[vue-select warn]: Could not stringify this option to generate unique key. Please provide'getOptionKey' prop to return a unique key for each option.
-https://vue-select.org/api/props.html#getoptionkey`, e, i);
-          }
-        } }, onTab: { type: Function, default: function() {
-          this.selectOnTab && !this.isComposing && this.typeAheadSelect();
-        } }, taggable: { type: Boolean, default: !1 }, tabindex: { type: Number, default: null }, pushTags: { type: Boolean, default: !1 }, filterable: { type: Boolean, default: !0 }, filterBy: { type: Function, default: function(e, i, n) {
-          return (i || "").toLocaleLowerCase().indexOf(n.toLocaleLowerCase()) > -1;
-        } }, filter: { type: Function, default: function(e, i) {
-          var n = this;
-          return e.filter(function(t) {
-            var m = n.getOptionLabel(t);
-            return typeof m == "number" && (m = m.toString()), n.filterBy(t, m, i);
-          });
-        } }, createOption: { type: Function, default: function(e) {
-          return c()(this.optionList[0]) === "object" ? T()({}, this.label, e) : e;
-        } }, resetOnOptionsChange: { default: !1, validator: function(e) {
-          return ["function", "boolean"].includes(c()(e));
-        } }, clearSearchOnBlur: { type: Function, default: function(e) {
-          var i = e.clearSearchOnSelect, n = e.multiple;
-          return i && !n;
-        } }, noDrop: { type: Boolean, default: !1 }, inputId: { type: String }, dir: { type: String, default: "auto" }, selectOnTab: { type: Boolean, default: !1 }, selectOnKeyCodes: { type: Array, default: function() {
-          return [13];
-        } }, searchInputQuerySelector: { type: String, default: "[type=search]" }, mapKeydown: { type: Function, default: function(e, i) {
-          return e;
-        } }, appendToBody: { type: Boolean, default: !1 }, calculatePosition: { type: Function, default: function(e, i, n) {
-          var t = n.width, m = n.top, u = n.left;
-          e.style.top = m, e.style.left = u, e.style.width = t;
-        } }, dropdownShouldOpen: { type: Function, default: function(e) {
-          var i = e.noDrop, n = e.open, t = e.mutableLoading;
-          return !i && n && !t;
-        } }, uid: { type: [String, Number], default: function() {
-          return K();
-        } } }, data: function() {
-          return { search: "", open: !1, isComposing: !1, pushedTags: [], _value: [] };
-        }, computed: { isTrackingValues: function() {
-          return this.value === void 0 || this.$options.propsData.hasOwnProperty("reduce");
-        }, selectedValue: function() {
-          var e = this.value;
-          return this.isTrackingValues && (e = this.$data._value), e != null && e !== "" ? [].concat(e) : [];
-        }, optionList: function() {
-          return this.options.concat(this.pushTags ? this.pushedTags : []);
-        }, searchEl: function() {
-          return this.$scopedSlots.search ? this.$refs.selectedOptions.querySelector(this.searchInputQuerySelector) : this.$refs.search;
-        }, scope: function() {
-          var e = this, i = { search: this.search, loading: this.loading, searching: this.searching, filteredOptions: this.filteredOptions };
-          return { search: { attributes: C({ disabled: this.disabled, placeholder: this.searchPlaceholder, tabindex: this.tabindex, readonly: !this.searchable, id: this.inputId, "aria-autocomplete": "list", "aria-labelledby": "vs".concat(this.uid, "__combobox"), "aria-controls": "vs".concat(this.uid, "__listbox"), ref: "search", type: "search", autocomplete: this.autocomplete, value: this.search }, this.dropdownOpen && this.filteredOptions[this.typeAheadPointer] ? { "aria-activedescendant": "vs".concat(this.uid, "__option-").concat(this.typeAheadPointer) } : {}), events: { compositionstart: function() {
-            return e.isComposing = !0;
-          }, compositionend: function() {
-            return e.isComposing = !1;
-          }, keydown: this.onSearchKeyDown, keypress: this.onSearchKeyPress, blur: this.onSearchBlur, focus: this.onSearchFocus, input: function(n) {
-            return e.search = n.target.value;
-          } } }, spinner: { loading: this.mutableLoading }, noOptions: { search: this.search, loading: this.mutableLoading, searching: this.searching }, openIndicator: { attributes: { ref: "openIndicator", role: "presentation", class: "vs__open-indicator" } }, listHeader: i, listFooter: i, header: C({}, i, { deselect: this.deselect }), footer: C({}, i, { deselect: this.deselect }) };
-        }, childComponents: function() {
-          return C({}, j, {}, this.components);
-        }, stateClasses: function() {
-          return { "vs--open": this.dropdownOpen, "vs--single": !this.multiple, "vs--multiple": this.multiple, "vs--searching": this.searching && !this.noDrop, "vs--searchable": this.searchable && !this.noDrop, "vs--unsearchable": !this.searchable, "vs--loading": this.mutableLoading, "vs--disabled": this.disabled };
-        }, searching: function() {
-          return !!this.search;
-        }, dropdownOpen: function() {
-          return this.dropdownShouldOpen(this);
-        }, searchPlaceholder: function() {
-          return this.isValueEmpty && this.placeholder ? this.placeholder : void 0;
-        }, filteredOptions: function() {
-          var e = [].concat(this.optionList);
-          if (!this.filterable && !this.taggable)
-            return e;
-          var i = this.search.length ? this.filter(e, this.search, this) : e;
-          if (this.taggable && this.search.length) {
-            var n = this.createOption(this.search);
-            this.optionExists(n) || i.unshift(n);
-          }
-          return i;
-        }, isValueEmpty: function() {
-          return this.selectedValue.length === 0;
-        }, showClearButton: function() {
-          return !this.multiple && this.clearable && !this.open && !this.isValueEmpty;
-        } }, watch: { options: function(e, i) {
-          var n = this;
-          !this.taggable && (typeof n.resetOnOptionsChange == "function" ? n.resetOnOptionsChange(e, i, n.selectedValue) : n.resetOnOptionsChange) && this.clearSelection(), this.value && this.isTrackingValues && this.setInternalValueFromOptions(this.value);
-        }, value: { immediate: !0, handler: function(e) {
-          this.isTrackingValues && this.setInternalValueFromOptions(e);
-        } }, multiple: function() {
-          this.clearSelection();
-        }, open: function(e) {
-          this.$emit(e ? "open" : "close");
-        }, search: function(e) {
-          e.length && (this.open = !0);
-        } }, created: function() {
-          this.mutableLoading = this.loading, this.$on("option:created", this.pushTag);
-        }, methods: { setInternalValueFromOptions: function(e) {
-          var i = this;
-          Array.isArray(e) ? this.$data._value = e.map(function(n) {
-            return i.findOptionFromReducedValue(n);
-          }) : this.$data._value = this.findOptionFromReducedValue(e);
-        }, select: function(e) {
-          this.$emit("option:selecting", e), this.isOptionSelected(e) ? this.deselectFromDropdown && (this.clearable || this.multiple && this.selectedValue.length > 1) && this.deselect(e) : (this.taggable && !this.optionExists(e) && this.$emit("option:created", e), this.multiple && (e = this.selectedValue.concat(e)), this.updateValue(e), this.$emit("option:selected", e)), this.onAfterSelect(e);
-        }, deselect: function(e) {
-          var i = this;
-          this.$emit("option:deselecting", e), this.updateValue(this.selectedValue.filter(function(n) {
-            return !i.optionComparator(n, e);
-          })), this.$emit("option:deselected", e);
-        }, clearSelection: function() {
-          this.updateValue(this.multiple ? [] : null);
-        }, onAfterSelect: function(e) {
-          var i = this;
-          this.closeOnSelect && (this.open = !this.open), this.clearSearchOnSelect && (this.search = ""), this.noDrop && this.multiple && this.$nextTick(function() {
-            return i.$refs.search.focus();
-          });
-        }, updateValue: function(e) {
-          var i = this;
-          this.value === void 0 && (this.$data._value = e), e !== null && (e = Array.isArray(e) ? e.map(function(n) {
-            return i.reduce(n);
-          }) : this.reduce(e)), this.$emit("input", e);
-        }, toggleDropdown: function(e) {
-          var i = e.target !== this.searchEl;
-          i && e.preventDefault();
-          var n = [].concat(r()(this.$refs.deselectButtons || []), r()([this.$refs.clearButton]));
-          this.searchEl === void 0 || n.filter(Boolean).some(function(t) {
-            return t.contains(e.target) || t === e.target;
-          }) ? e.preventDefault() : this.open && i ? this.searchEl.blur() : this.disabled || (this.open = !0, this.searchEl.focus());
-        }, isOptionSelected: function(e) {
-          var i = this;
-          return this.selectedValue.some(function(n) {
-            return i.optionComparator(n, e);
-          });
-        }, isOptionDeselectable: function(e) {
-          return this.isOptionSelected(e) && this.deselectFromDropdown;
-        }, optionComparator: function(e, i) {
-          return this.getOptionKey(e) === this.getOptionKey(i);
-        }, findOptionFromReducedValue: function(e) {
-          var i = this, n = [].concat(r()(this.options), r()(this.pushedTags)).filter(function(t) {
-            return JSON.stringify(i.reduce(t)) === JSON.stringify(e);
-          });
-          return n.length === 1 ? n[0] : n.find(function(t) {
-            return i.optionComparator(t, i.$data._value);
-          }) || e;
-        }, closeSearchOptions: function() {
-          this.open = !1, this.$emit("search:blur");
-        }, maybeDeleteValue: function() {
-          if (!this.searchEl.value.length && this.selectedValue && this.selectedValue.length && this.clearable) {
-            var e = null;
-            this.multiple && (e = r()(this.selectedValue.slice(0, this.selectedValue.length - 1))), this.updateValue(e);
-          }
-        }, optionExists: function(e) {
-          var i = this;
-          return this.optionList.some(function(n) {
-            return i.optionComparator(n, e);
-          });
-        }, normalizeOptionForSlot: function(e) {
-          return c()(e) === "object" ? e : T()({}, this.label, e);
-        }, pushTag: function(e) {
-          this.pushedTags.push(e);
-        }, onEscape: function() {
-          this.search.length ? this.search = "" : this.open = !1;
-        }, onSearchBlur: function() {
-          if (!this.mousedown || this.searching) {
-            var e = this.clearSearchOnSelect, i = this.multiple;
-            return this.clearSearchOnBlur({ clearSearchOnSelect: e, multiple: i }) && (this.search = ""), void this.closeSearchOptions();
-          }
-          this.mousedown = !1, this.search.length !== 0 || this.options.length !== 0 || this.closeSearchOptions();
-        }, onSearchFocus: function() {
-          this.open = !0, this.$emit("search:focus");
-        }, onMousedown: function() {
-          this.mousedown = !0;
-        }, onMouseUp: function() {
-          this.mousedown = !1;
-        }, onSearchKeyDown: function(e) {
-          var i = this, n = function(u) {
-            return u.preventDefault(), !i.isComposing && i.typeAheadSelect();
-          }, t = { 8: function(u) {
-            return i.maybeDeleteValue();
-          }, 9: function(u) {
-            return i.onTab();
-          }, 27: function(u) {
-            return i.onEscape();
-          }, 38: function(u) {
-            if (u.preventDefault(), i.open)
-              return i.typeAheadUp();
-            i.open = !0;
-          }, 40: function(u) {
-            if (u.preventDefault(), i.open)
-              return i.typeAheadDown();
-            i.open = !0;
-          } };
-          this.selectOnKeyCodes.forEach(function(u) {
-            return t[u] = n;
-          });
-          var m = this.mapKeydown(t, this);
-          if (typeof m[e.keyCode] == "function")
-            return m[e.keyCode](e);
-        }, onSearchKeyPress: function(e) {
-          this.open || e.keyCode !== 32 || (e.preventDefault(), this.open = !0);
-        } } }, function() {
-          var e = this, i = e.$createElement, n = e._self._c || i;
-          return n("div", { staticClass: "v-select", class: e.stateClasses, attrs: { dir: e.dir } }, [e._t("header", null, null, e.scope.header), e._v(" "), n("div", { ref: "toggle", staticClass: "vs__dropdown-toggle", attrs: { id: "vs" + e.uid + "__combobox", role: "combobox", "aria-expanded": e.dropdownOpen.toString(), "aria-owns": "vs" + e.uid + "__listbox", "aria-label": "Search for option" }, on: { mousedown: function(t) {
-            return e.toggleDropdown(t);
-          } } }, [n("div", { ref: "selectedOptions", staticClass: "vs__selected-options" }, [e._l(e.selectedValue, function(t) {
-            return e._t("selected-option-container", [n("span", { key: e.getOptionKey(t), staticClass: "vs__selected" }, [e._t("selected-option", [e._v(`
-            ` + e._s(e.getOptionLabel(t)) + `
-          `)], null, e.normalizeOptionForSlot(t)), e._v(" "), e.multiple ? n("button", { ref: "deselectButtons", refInFor: !0, staticClass: "vs__deselect", attrs: { disabled: e.disabled, type: "button", title: "Deselect " + e.getOptionLabel(t), "aria-label": "Deselect " + e.getOptionLabel(t) }, on: { click: function(m) {
-              return e.deselect(t);
-            } } }, [n(e.childComponents.Deselect, { tag: "component" })], 1) : e._e()], 2)], { option: e.normalizeOptionForSlot(t), deselect: e.deselect, multiple: e.multiple, disabled: e.disabled });
-          }), e._v(" "), e._t("search", [n("input", e._g(e._b({ staticClass: "vs__search" }, "input", e.scope.search.attributes, !1), e.scope.search.events))], null, e.scope.search)], 2), e._v(" "), n("div", { ref: "actions", staticClass: "vs__actions" }, [n("button", { directives: [{ name: "show", rawName: "v-show", value: e.showClearButton, expression: "showClearButton" }], ref: "clearButton", staticClass: "vs__clear", attrs: { disabled: e.disabled, type: "button", title: "Clear Selected", "aria-label": "Clear Selected" }, on: { click: e.clearSelection } }, [n(e.childComponents.Deselect, { tag: "component" })], 1), e._v(" "), e._t("open-indicator", [e.noDrop ? e._e() : n(e.childComponents.OpenIndicator, e._b({ tag: "component" }, "component", e.scope.openIndicator.attributes, !1))], null, e.scope.openIndicator), e._v(" "), e._t("spinner", [n("div", { directives: [{ name: "show", rawName: "v-show", value: e.mutableLoading, expression: "mutableLoading" }], staticClass: "vs__spinner" }, [e._v("Loading...")])], null, e.scope.spinner)], 2)]), e._v(" "), n("transition", { attrs: { name: e.transition } }, [e.dropdownOpen ? n("ul", { directives: [{ name: "append-to-body", rawName: "v-append-to-body" }], key: "vs" + e.uid + "__listbox", ref: "dropdownMenu", staticClass: "vs__dropdown-menu", attrs: { id: "vs" + e.uid + "__listbox", role: "listbox", tabindex: "-1" }, on: { mousedown: function(t) {
-            return t.preventDefault(), e.onMousedown(t);
-          }, mouseup: e.onMouseUp } }, [e._t("list-header", null, null, e.scope.listHeader), e._v(" "), e._l(e.filteredOptions, function(t, m) {
-            return n("li", { key: e.getOptionKey(t), staticClass: "vs__dropdown-option", class: { "vs__dropdown-option--deselect": e.isOptionDeselectable(t) && m === e.typeAheadPointer, "vs__dropdown-option--selected": e.isOptionSelected(t), "vs__dropdown-option--highlight": m === e.typeAheadPointer, "vs__dropdown-option--disabled": !e.selectable(t) }, attrs: { id: "vs" + e.uid + "__option-" + m, role: "option", "aria-selected": m === e.typeAheadPointer || null }, on: { mouseover: function(u) {
-              e.selectable(t) && (e.typeAheadPointer = m);
-            }, click: function(u) {
-              u.preventDefault(), u.stopPropagation(), e.selectable(t) && e.select(t);
-            } } }, [e._t("option", [e._v(`
-          ` + e._s(e.getOptionLabel(t)) + `
-        `)], null, e.normalizeOptionForSlot(t))], 2);
-          }), e._v(" "), e.filteredOptions.length === 0 ? n("li", { staticClass: "vs__no-options" }, [e._t("no-options", [e._v(`
+          } }, appendToBody: { type: Boolean, default: !1 }, calculatePosition: { type: Function, default: function(e, a, i) {
+            var n = i.width, c = i.top, u = i.left;
+            e.style.top = c, e.style.left = u, e.style.width = n;
+          } }, dropdownShouldOpen: { type: Function, default: function(e) {
+            var a = e.noDrop, i = e.open, n = e.mutableLoading;
+            return !a && i && !n;
+          } }, uid: { type: [String, Number], default: function() {
+            return G();
+          } } }, data: function() {
+            return { search: "", open: !1, isComposing: !1, pushedTags: [], _value: [] };
+          }, computed: { isTrackingValues: function() {
+            return this.value === void 0 || this.$options.propsData.hasOwnProperty("reduce");
+          }, selectedValue: function() {
+            var e = this.value;
+            return this.isTrackingValues && (e = this.$data._value), e != null && e !== "" ? [].concat(e) : [];
+          }, optionList: function() {
+            return this.options.concat(this.pushTags ? this.pushedTags : []);
+          }, searchEl: function() {
+            return this.$scopedSlots.search ? this.$refs.selectedOptions.querySelector(this.searchInputQuerySelector) : this.$refs.search;
+          }, scope: function() {
+            var e = this, a = { search: this.search, loading: this.loading, searching: this.searching, filteredOptions: this.filteredOptions };
+            return { search: { attributes: T({ disabled: this.disabled, placeholder: this.searchPlaceholder, tabindex: this.tabindex, readonly: !this.searchable, id: this.inputId, "aria-autocomplete": "list", "aria-labelledby": "vs".concat(this.uid, "__combobox"), "aria-controls": "vs".concat(this.uid, "__listbox"), ref: "search", type: "search", autocomplete: this.autocomplete, value: this.search }, this.dropdownOpen && this.filteredOptions[this.typeAheadPointer] ? { "aria-activedescendant": "vs".concat(this.uid, "__option-").concat(this.typeAheadPointer) } : {}), events: { compositionstart: function() {
+              return e.isComposing = !0;
+            }, compositionend: function() {
+              return e.isComposing = !1;
+            }, keydown: this.onSearchKeyDown, keypress: this.onSearchKeyPress, blur: this.onSearchBlur, focus: this.onSearchFocus, input: function(i) {
+              return e.search = i.target.value;
+            } } }, spinner: { loading: this.mutableLoading }, noOptions: { search: this.search, loading: this.mutableLoading, searching: this.searching }, openIndicator: { attributes: { ref: "openIndicator", role: "presentation", class: "vs__open-indicator" } }, listHeader: a, listFooter: a, header: T({}, a, { deselect: this.deselect }), footer: T({}, a, { deselect: this.deselect }) };
+          }, childComponents: function() {
+            return T({}, O, {}, this.components);
+          }, stateClasses: function() {
+            return { "vs--open": this.dropdownOpen, "vs--single": !this.multiple, "vs--multiple": this.multiple, "vs--searching": this.searching && !this.noDrop, "vs--searchable": this.searchable && !this.noDrop, "vs--unsearchable": !this.searchable, "vs--loading": this.mutableLoading, "vs--disabled": this.disabled };
+          }, searching: function() {
+            return !!this.search;
+          }, dropdownOpen: function() {
+            return this.dropdownShouldOpen(this);
+          }, searchPlaceholder: function() {
+            return this.isValueEmpty && this.placeholder ? this.placeholder : void 0;
+          }, filteredOptions: function() {
+            var e = [].concat(this.optionList);
+            if (!this.filterable && !this.taggable) return e;
+            var a = this.search.length ? this.filter(e, this.search, this) : e;
+            if (this.taggable && this.search.length) {
+              var i = this.createOption(this.search);
+              this.optionExists(i) || a.unshift(i);
+            }
+            return a;
+          }, isValueEmpty: function() {
+            return this.selectedValue.length === 0;
+          }, showClearButton: function() {
+            return !this.multiple && this.clearable && !this.open && !this.isValueEmpty;
+          } }, watch: { options: function(e, a) {
+            var i = this;
+            !this.taggable && (typeof i.resetOnOptionsChange == "function" ? i.resetOnOptionsChange(e, a, i.selectedValue) : i.resetOnOptionsChange) && this.clearSelection(), this.value && this.isTrackingValues && this.setInternalValueFromOptions(this.value);
+          }, value: { immediate: !0, handler: function(e) {
+            this.isTrackingValues && this.setInternalValueFromOptions(e);
+          } }, multiple: function() {
+            this.clearSelection();
+          }, open: function(e) {
+            this.$emit(e ? "open" : "close");
+          }, search: function(e) {
+            e.length && (this.open = !0);
+          } }, created: function() {
+            this.mutableLoading = this.loading, this.$on("option:created", this.pushTag);
+          }, methods: { setInternalValueFromOptions: function(e) {
+            var a = this;
+            Array.isArray(e) ? this.$data._value = e.map(function(i) {
+              return a.findOptionFromReducedValue(i);
+            }) : this.$data._value = this.findOptionFromReducedValue(e);
+          }, select: function(e) {
+            this.$emit("option:selecting", e), this.isOptionSelected(e) ? this.deselectFromDropdown && (this.clearable || this.multiple && this.selectedValue.length > 1) && this.deselect(e) : (this.taggable && !this.optionExists(e) && this.$emit("option:created", e), this.multiple && (e = this.selectedValue.concat(e)), this.updateValue(e), this.$emit("option:selected", e)), this.onAfterSelect(e);
+          }, deselect: function(e) {
+            var a = this;
+            this.$emit("option:deselecting", e), this.updateValue(this.selectedValue.filter(function(i) {
+              return !a.optionComparator(i, e);
+            })), this.$emit("option:deselected", e);
+          }, clearSelection: function() {
+            this.updateValue(this.multiple ? [] : null);
+          }, onAfterSelect: function(e) {
+            var a = this;
+            this.closeOnSelect && (this.open = !this.open), this.clearSearchOnSelect && (this.search = ""), this.noDrop && this.multiple && this.$nextTick(function() {
+              return a.$refs.search.focus();
+            });
+          }, updateValue: function(e) {
+            var a = this;
+            this.value === void 0 && (this.$data._value = e), e !== null && (e = Array.isArray(e) ? e.map(function(i) {
+              return a.reduce(i);
+            }) : this.reduce(e)), this.$emit("input", e);
+          }, toggleDropdown: function(e) {
+            var a = e.target !== this.searchEl;
+            a && e.preventDefault();
+            var i = [].concat(o()(this.$refs.deselectButtons || []), o()([this.$refs.clearButton]));
+            this.searchEl === void 0 || i.filter(Boolean).some(function(n) {
+              return n.contains(e.target) || n === e.target;
+            }) ? e.preventDefault() : this.open && a ? this.searchEl.blur() : this.disabled || (this.open = !0, this.searchEl.focus());
+          }, isOptionSelected: function(e) {
+            var a = this;
+            return this.selectedValue.some(function(i) {
+              return a.optionComparator(i, e);
+            });
+          }, isOptionDeselectable: function(e) {
+            return this.isOptionSelected(e) && this.deselectFromDropdown;
+          }, optionComparator: function(e, a) {
+            return this.getOptionKey(e) === this.getOptionKey(a);
+          }, findOptionFromReducedValue: function(e) {
+            var a = this, i = [].concat(o()(this.options), o()(this.pushedTags)).filter(function(n) {
+              return JSON.stringify(a.reduce(n)) === JSON.stringify(e);
+            });
+            return i.length === 1 ? i[0] : i.find(function(n) {
+              return a.optionComparator(n, a.$data._value);
+            }) || e;
+          }, closeSearchOptions: function() {
+            this.open = !1, this.$emit("search:blur");
+          }, maybeDeleteValue: function() {
+            if (!this.searchEl.value.length && this.selectedValue && this.selectedValue.length && this.clearable) {
+              var e = null;
+              this.multiple && (e = o()(this.selectedValue.slice(0, this.selectedValue.length - 1))), this.updateValue(e);
+            }
+          }, optionExists: function(e) {
+            var a = this;
+            return this.optionList.some(function(i) {
+              return a.optionComparator(i, e);
+            });
+          }, normalizeOptionForSlot: function(e) {
+            return d()(e) === "object" ? e : h()({}, this.label, e);
+          }, pushTag: function(e) {
+            this.pushedTags.push(e);
+          }, onEscape: function() {
+            this.search.length ? this.search = "" : this.open = !1;
+          }, onSearchBlur: function() {
+            if (!this.mousedown || this.searching) {
+              var e = this.clearSearchOnSelect, a = this.multiple;
+              return this.clearSearchOnBlur({ clearSearchOnSelect: e, multiple: a }) && (this.search = ""), void this.closeSearchOptions();
+            }
+            this.mousedown = !1, this.search.length !== 0 || this.options.length !== 0 || this.closeSearchOptions();
+          }, onSearchFocus: function() {
+            this.open = !0, this.$emit("search:focus");
+          }, onMousedown: function() {
+            this.mousedown = !0;
+          }, onMouseUp: function() {
+            this.mousedown = !1;
+          }, onSearchKeyDown: function(e) {
+            var a = this, i = function(u) {
+              return u.preventDefault(), !a.isComposing && a.typeAheadSelect();
+            }, n = { 8: function(u) {
+              return a.maybeDeleteValue();
+            }, 9: function(u) {
+              return a.onTab();
+            }, 27: function(u) {
+              return a.onEscape();
+            }, 38: function(u) {
+              if (u.preventDefault(), a.open) return a.typeAheadUp();
+              a.open = !0;
+            }, 40: function(u) {
+              if (u.preventDefault(), a.open) return a.typeAheadDown();
+              a.open = !0;
+            } };
+            this.selectOnKeyCodes.forEach(function(u) {
+              return n[u] = i;
+            });
+            var c = this.mapKeydown(n, this);
+            if (typeof c[e.keyCode] == "function") return c[e.keyCode](e);
+          }, onSearchKeyPress: function(e) {
+            this.open || e.keyCode !== 32 || (e.preventDefault(), this.open = !0);
+          } } }, function() {
+            var e = this, a = e.$createElement, i = e._self._c || a;
+            return i("div", { staticClass: "v-select", class: e.stateClasses, attrs: { dir: e.dir } }, [e._t("header", null, null, e.scope.header), e._v(" "), i("div", { ref: "toggle", staticClass: "vs__dropdown-toggle", attrs: { id: "vs" + e.uid + "__combobox", role: "combobox", "aria-expanded": e.dropdownOpen.toString(), "aria-owns": "vs" + e.uid + "__listbox", "aria-controls": "vs" + e.uid + "__listbox", "aria-label": "Search for option" }, on: { mousedown: function(n) {
+              return e.toggleDropdown(n);
+            } } }, [i("div", { ref: "selectedOptions", staticClass: "vs__selected-options" }, [e._l(e.selectedValue, function(n) {
+              return e._t("selected-option-container", [i("span", { key: e.getOptionKey(n), staticClass: "vs__selected" }, [e._t("selected-option", [e._v(`
+            ` + e._s(e.getOptionLabel(n)) + `
+          `)], null, e.normalizeOptionForSlot(n)), e._v(" "), e.multiple ? i("button", { ref: "deselectButtons", refInFor: !0, staticClass: "vs__deselect", attrs: { disabled: e.disabled, type: "button", title: "Deselect " + e.getOptionLabel(n), "aria-label": "Deselect " + e.getOptionLabel(n) }, on: { click: function(c) {
+                return e.deselect(n);
+              } } }, [i(e.childComponents.Deselect, { tag: "component" })], 1) : e._e()], 2)], { option: e.normalizeOptionForSlot(n), deselect: e.deselect, multiple: e.multiple, disabled: e.disabled });
+            }), e._v(" "), e._t("search", [i("input", e._g(e._b({ staticClass: "vs__search" }, "input", e.scope.search.attributes, !1), e.scope.search.events))], null, e.scope.search)], 2), e._v(" "), i("div", { ref: "actions", staticClass: "vs__actions" }, [i("button", { directives: [{ name: "show", rawName: "v-show", value: e.showClearButton, expression: "showClearButton" }], ref: "clearButton", staticClass: "vs__clear", attrs: { disabled: e.disabled, type: "button", title: "Clear Selected", "aria-label": "Clear Selected" }, on: { click: e.clearSelection } }, [i(e.childComponents.Deselect, { tag: "component" })], 1), e._v(" "), e._t("open-indicator", [e.noDrop ? e._e() : i(e.childComponents.OpenIndicator, e._b({ tag: "component" }, "component", e.scope.openIndicator.attributes, !1))], null, e.scope.openIndicator), e._v(" "), e._t("spinner", [i("div", { directives: [{ name: "show", rawName: "v-show", value: e.mutableLoading, expression: "mutableLoading" }], staticClass: "vs__spinner" }, [e._v("Loading...")])], null, e.scope.spinner)], 2)]), e._v(" "), i("transition", { attrs: { name: e.transition } }, [e.dropdownOpen ? i("ul", { directives: [{ name: "append-to-body", rawName: "v-append-to-body" }], key: "vs" + e.uid + "__listbox", ref: "dropdownMenu", staticClass: "vs__dropdown-menu", attrs: { id: "vs" + e.uid + "__listbox", role: "listbox", tabindex: "-1" }, on: { mousedown: function(n) {
+              return n.preventDefault(), e.onMousedown(n);
+            }, mouseup: e.onMouseUp } }, [e._t("list-header", null, null, e.scope.listHeader), e._v(" "), e._l(e.filteredOptions, function(n, c) {
+              return i("li", { key: e.getOptionKey(n), staticClass: "vs__dropdown-option", class: { "vs__dropdown-option--deselect": e.isOptionDeselectable(n) && c === e.typeAheadPointer, "vs__dropdown-option--selected": e.isOptionSelected(n), "vs__dropdown-option--highlight": c === e.typeAheadPointer, "vs__dropdown-option--disabled": !e.selectable(n) }, attrs: { id: "vs" + e.uid + "__option-" + c, role: "option", "aria-selected": c === e.typeAheadPointer || null }, on: { mouseover: function(u) {
+                e.selectable(n) && (e.typeAheadPointer = c);
+              }, click: function(u) {
+                u.preventDefault(), u.stopPropagation(), e.selectable(n) && e.select(n);
+              } } }, [e._t("option", [e._v(`
+          ` + e._s(e.getOptionLabel(n)) + `
+        `)], null, e.normalizeOptionForSlot(n))], 2);
+            }), e._v(" "), e.filteredOptions.length === 0 ? i("li", { staticClass: "vs__no-options" }, [e._t("no-options", [e._v(`
           Sorry, no matching options.
-        `)], null, e.scope.noOptions)], 2) : e._e(), e._v(" "), e._t("list-footer", null, null, e.scope.listFooter)], 2) : n("ul", { staticStyle: { display: "none", visibility: "hidden" }, attrs: { id: "vs" + e.uid + "__listbox", role: "listbox" } })]), e._v(" "), e._t("footer", null, null, e.scope.footer)], 2);
-        }, [], !1, null, null, null).exports, L = { ajax: z, pointer: _, pointerScroll: b }, w = M;
-      })(), y;
-    })();
-  });
-})($);
-const J = /* @__PURE__ */ W(E);
-var Z = function() {
-  var a = this, p = a.$createElement, g = a._self._c || p;
-  return g("div", [g("v-select", {
-    staticClass: "select",
-    attrs: {
-      label: "name",
-      options: a.countries,
-      disabled: a.disabled,
-      clearable: a.clearable,
-      multiple: a.multiple,
-      searchable: a.searchable,
-      closeOnSelect: a.closeOnSelect,
-      placeholder: a.placeholder
-    },
-    on: {
-      input: a.onSelect,
-      open: a.open,
-      close: a.close,
-      "option:selecting": a.option_selecting,
-      "option:selected": a.option_selected,
-      "option:deselecting": a.option_deselecting,
-      "option:deselected": a.option_deselected
-    },
-    scopedSlots: a._u([{
-      key: "selected-option",
-      fn: function(l) {
-        return [g("div", {
-          staticClass: "selected-option"
-        }, [l.emoji && a.enabledFlags ? g("span", {
-          staticClass: "flag"
-        }, [a._v(" " + a._s(l.emoji) + " ")]) : a._e(), l.phone_code && a.enabledPhonecode ? g("span", {
-          staticClass: "phonecode"
-        }, [a._v(" " + a._s(l.phone_code) + " ")]) : a._e(), l.name && a.enabledName ? g("span", {
-          staticClass: "name"
-        }, [a._v(" " + a._s(a.CountryName(l)) + " ")]) : a._e()])];
-      }
-    }, {
-      key: "option",
-      fn: function(l) {
-        return [g("div", {
-          staticClass: "option"
-        }, [l.emoji && a.enabledFlags ? g("span", {
-          staticClass: "flag"
-        }, [a._v(" " + a._s(l.emoji) + " ")]) : a._e(), l.name && a.enabledName ? g("span", {
-          staticClass: "name",
-          class: {
-            "bold-text": a.preferredCountries.length && a.preferredCountries.includes(l.iso2)
-          }
-        }, [a._v(" " + a._s(a.CountryName(l)) + " ")]) : a._e(), l.phone_code && a.enabledPhonecode ? g("span", {
-          staticClass: "phonecode"
-        }, [a._v(" " + a._s(l.phone_code) + " ")]) : a._e()])];
-      }
-    }]),
-    model: {
-      value: a.selected,
-      callback: function(l) {
-        a.selected = l;
-      },
-      expression: "selected"
-    }
-  })], 1);
-}, q = [];
-function x(a, p, g, l, d, y, s, r) {
-  var o = typeof a == "function" ? a.options : a;
-  p && (o.render = p, o.staticRenderFns = g, o._compiled = !0), l && (o.functional = !0), y && (o._scopeId = "data-v-" + y);
-  var c;
-  if (s ? (c = function(b) {
-    b = b || // cached call
-    this.$vnode && this.$vnode.ssrContext || // stateful
-    this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext, !b && typeof __VUE_SSR_CONTEXT__ < "u" && (b = __VUE_SSR_CONTEXT__), d && d.call(this, b), b && b._registeredComponents && b._registeredComponents.add(s);
-  }, o._ssrRegister = c) : d && (c = r ? function() {
-    d.call(
-      this,
-      (o.functional ? this.parent : this).$root.$options.shadowRoot
-    );
-  } : d), c)
-    if (o.functional) {
-      o._injectStyles = c;
-      var U = o.render;
-      o.render = function(_, z) {
-        return c.call(z), U(_, z);
-      };
-    } else {
-      var T = o.beforeCreate;
-      o.beforeCreate = T ? [].concat(T, c) : [c];
-    }
-  return {
-    exports: a,
-    options: o
+        `)], null, e.scope.noOptions)], 2) : e._e(), e._v(" "), e._t("list-footer", null, null, e.scope.listFooter)], 2) : i("ul", { staticStyle: { display: "none", visibility: "hidden" }, attrs: { id: "vs" + e.uid + "__listbox", role: "listbox" } })]), e._v(" "), e._t("footer", null, null, e.scope.footer)], 2);
+          }, []).exports, I = { ajax: v, pointer: _, pointerScroll: N }, D = E;
+        })(), p;
+      })();
+    });
+  }(A)), A.exports;
+}
+var H = V();
+const W = /* @__PURE__ */ L(H);
+function J(t, r, g, l, f, p, s, o) {
+  var m = typeof t == "function" ? t.options : t;
+  return r && (m.render = r, m.staticRenderFns = g, m._compiled = !0), m._scopeId = "data-v-" + p, {
+    exports: t,
+    options: m
   };
 }
-const Y = {
+const $ = {
   name: "vue-country-dropdown-2",
   components: {
-    vSelect: J
+    vSelect: W
   },
   props: {
     disabled: {
@@ -12871,53 +12753,53 @@ const Y = {
   },
   methods: {
     getCountries() {
-      this.countries = V.map(
-        (a) => ({
-          ...a,
-          phone_code: this.fixPhoneCode(a.phone_code)
+      this.countries = K.map(
+        (t) => ({
+          ...t,
+          phone_code: this.fixPhoneCode(t.phone_code)
         })
       );
     },
     DefaultCountry() {
       this.defaultCountry && (this.selected = this.countries.find(
-        (a) => a.iso2 === this.defaultCountry
+        (t) => t.iso2 === this.defaultCountry
       ), this.selected || this.SelectFirstItem());
     },
     DefaultCountryByName() {
       this.defaultCountryByName && (this.selected = this.countries.find(
-        (a) => a.name === this.defaultCountryByName
+        (t) => t.name === this.defaultCountryByName
       ), this.selected || this.SelectFirstItem());
     },
     DefaultCountryByPhoneCode() {
       this.defaultCountryByPhoneCode && (this.selected = this.countries.find(
-        (a) => a.phone_code === this.defaultCountryByPhoneCode
+        (t) => t.phone_code === this.defaultCountryByPhoneCode
       ), this.selected || this.SelectFirstItem());
     },
     PreferredCountries() {
       if (this.preferredCountries.length) {
-        const a = this.countries.filter(
-          (p) => this.preferredCountries.includes(p.iso2)
+        const t = this.countries.filter(
+          (r) => this.preferredCountries.includes(r.iso2)
         );
         this.countries = this.countries.filter(
-          (p) => !this.preferredCountries.includes(p.iso2)
-        ), this.countries.unshift(...a);
+          (r) => !this.preferredCountries.includes(r.iso2)
+        ), this.countries.unshift(...t);
       }
     },
     OnlyCountries() {
       this.onlyCountries.length && (this.countries = this.countries.filter(
-        (a) => this.onlyCountries.includes(a.iso2)
+        (t) => this.onlyCountries.includes(t.iso2)
       ));
     },
     IgnoredCountries() {
       this.ignoredCountries.length && (this.countries = this.countries.filter(
-        (a) => !this.ignoredCountries.includes(a.iso2)
+        (t) => !this.ignoredCountries.includes(t.iso2)
       ));
     },
     ShowNotSelectedOption() {
       this.showNotSelectedOption && this.countries.unshift(this.notSelectedOption);
     },
-    onSelect(a) {
-      this.$emit("onSelect", a), this.$emit("input", a);
+    onSelect(t) {
+      this.$emit("onSelect", t), this.$emit("input", t);
     },
     open() {
       this.$emit("open");
@@ -12925,26 +12807,26 @@ const Y = {
     close() {
       this.$emit("close");
     },
-    option_selecting(a) {
-      this.$emit("option_selecting", a);
+    option_selecting(t) {
+      this.$emit("option_selecting", t);
     },
-    option_selected(a) {
-      this.$emit("option_selected", a);
+    option_selected(t) {
+      this.$emit("option_selected", t);
     },
-    option_deselecting(a) {
-      this.$emit("option_deselecting", a);
+    option_deselecting(t) {
+      this.$emit("option_deselecting", t);
     },
-    option_deselected(a) {
-      this.$emit("option_deselected", a);
+    option_deselected(t) {
+      this.$emit("option_deselected", t);
     },
-    CountryName(a) {
-      return this.countryNameTranslation && a.translations && a.translations[this.countryNameTranslation] ? a.translations[this.countryNameTranslation] : a.name;
+    CountryName(t) {
+      return this.countryNameTranslation && t.translations && t.translations[this.countryNameTranslation] ? t.translations[this.countryNameTranslation] : t.name;
     },
     SelectFirstItem() {
       this.selectFirstItem && (this.selected = this.countries.at(0));
     },
-    fixPhoneCode(a) {
-      return a = a.includes("+") ? a : `+${a}`, a.includes("and") ? a.split("and").at(0).trim() : a;
+    fixPhoneCode(t) {
+      return t = t.includes("+") ? t : `+${t}`, t.includes("and") ? t.split("and").at(0).trim() : t;
     },
     ImmediateCallSelect() {
       this.immediateCallSelectEvent && this.onSelect(this.selected);
@@ -12961,27 +12843,28 @@ const Y = {
       this.DefaultCountryByPhoneCode(), this.onSelect(this.selected);
     }
   }
-}, G = {};
-var X = /* @__PURE__ */ x(
-  Y,
+};
+var Z = function() {
+  var r = this, g = r._self._c;
+  return g("div", [g("v-select", { staticClass: "select", attrs: { label: "name", options: r.countries, disabled: r.disabled, clearable: r.clearable, multiple: r.multiple, searchable: r.searchable, closeOnSelect: r.closeOnSelect, placeholder: r.placeholder }, on: { input: r.onSelect, open: r.open, close: r.close, "option:selecting": r.option_selecting, "option:selected": r.option_selected, "option:deselecting": r.option_deselecting, "option:deselected": r.option_deselected }, scopedSlots: r._u([{ key: "selected-option", fn: function(l) {
+    return [g("div", { staticClass: "selected-option" }, [l.emoji && r.enabledFlags ? g("span", { staticClass: "flag" }, [r._v(" " + r._s(l.emoji) + " ")]) : r._e(), l.phone_code && r.enabledPhonecode ? g("span", { staticClass: "phonecode" }, [r._v(" " + r._s(l.phone_code) + " ")]) : r._e(), l.name && r.enabledName ? g("span", { staticClass: "name" }, [r._v(" " + r._s(r.CountryName(l)) + " ")]) : r._e()])];
+  } }, { key: "option", fn: function(l) {
+    return [g("div", { staticClass: "option" }, [l.emoji && r.enabledFlags ? g("span", { staticClass: "flag" }, [r._v(" " + r._s(l.emoji) + " ")]) : r._e(), l.name && r.enabledName ? g("span", { staticClass: "name", class: { "bold-text": r.preferredCountries.length && r.preferredCountries.includes(l.iso2) } }, [r._v(" " + r._s(r.CountryName(l)) + " ")]) : r._e(), l.phone_code && r.enabledPhonecode ? g("span", { staticClass: "phonecode" }, [r._v(" " + r._s(l.phone_code) + " ")]) : r._e()])];
+  } }]), model: { value: r.selected, callback: function(l) {
+    r.selected = l;
+  }, expression: "selected" } })], 1);
+}, q = [], x = /* @__PURE__ */ J(
+  $,
   Z,
   q,
   !1,
-  Q,
-  "e4893bb2",
   null,
-  null
+  "5e374704"
 );
-function Q(a) {
-  for (let p in G)
-    this[p] = G[p];
-}
-const F = /* @__PURE__ */ function() {
-  return X.exports;
-}(), ee = {
-  ...F,
-  install: (a) => (a.component(F.name, F), a)
+const S = x.exports, Y = {
+  ...S,
+  install: (t) => (t.component(S.name, S), t)
 };
 export {
-  ee as default
+  Y as default
 };
